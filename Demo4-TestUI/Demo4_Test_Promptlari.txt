@@ -1,0 +1,55 @@
+===============================================================================
+DEMO #4 - TEST CASE VE UI TEST URETIMI - HAZIR PROMPTLAR
+GitHub Copilot Egitimi - Contoso
+Dosyalar: Demo4-TestUI/src/DiscountService.cs  ve  Demo4-TestUI/ui/DeviceCard.tsx
+===============================================================================
+
+
+-------------------------------------------------------------------------------
+ADIM 1 - BIRIM TESTLERI URET  (DiscountService.cs)
+-------------------------------------------------------------------------------
+Sen kidemli bir .NET test muhendisisin. #file:DiscountService.cs sinifi icin xUnit birim testleri uret.
+Kapsam: happy path + sinir (edge) durumlari + exception senaryolari.
+Kisit: Test isimleri MetotAdi_Kosul_BeklenenSonuc deseninde olsun; her testte tek Assert.
+Cikti: Derlenebilir tek bir test sinifi + hangi senaryolarin kapsandiginin kisa listesi.
+
+
+-------------------------------------------------------------------------------
+ADIM 2 - EDGE / EXCEPTION SENARYOLARINI NETLESTIR  (opsiyonel)
+-------------------------------------------------------------------------------
+ApplyDiscount metodundaki tum dallari dusun: gecersiz miktar (<=0), negatif tutar,
+bilinmeyen uyelik seviyesi, kupon (null/gecerli/gecersiz), tam 10 adet toplu indirim
+siniri ve tam 1000 sadakat puani. Bu sinir degerleri kapsayan ek testleri yaz.
+
+
+-------------------------------------------------------------------------------
+ADIM 3 - EKSIK COVERAGE'I BUL
+-------------------------------------------------------------------------------
+Urettigin testleri #file:DiscountService.cs ile karsilastir. Hangi kod dallari veya kosullari hala test edilmiyor? Eksik coverage alanlarini tablo halinde listele (Dal | Neden kritik | Onerilen test) ve eksik testleri uret.
+
+
+-------------------------------------------------------------------------------
+ADIM 4 - REACT ICIN UI TEST TASLAGI  (DeviceCard.tsx)
+-------------------------------------------------------------------------------
+Sen kidemli bir frontend test muhendisisin. #file:DeviceCard.tsx bileseni icin
+React Testing Library + Playwright ile UI testleri uret.
+Senaryolar: baslangicta miktar 1 gosterilir; "+" miktari artirir; "-" 1'in altina
+inmez; devre disi cihazda "Sepete Ekle" pasiftir; tiklaninca onAddToCart(deviceId,
+quantity) dogru degerlerle cagrilir.
+Cikti: data-testid'leri kullanan tek dosyalik test + kapsanan senaryolarin listesi.
+
+
+-------------------------------------------------------------------------------
+KAPANIS - TESTLERI CALISTIR
+-------------------------------------------------------------------------------
+Urettigin testleri calistiracak komutu ver ve beklenen sonucu (kac test, yesil/kirmizi) acikla.
+
+
+===============================================================================
+TEK SATIRLIK HIZLI DEMO VERSIYONU
+===============================================================================
+#file:DiscountService.cs icin xUnit birim testleri uret - happy path + edge + exception, isimlendirme MetotAdi_Kosul_BeklenenSonuc - sonra eksik coverage dallarini bul ve tamamla.
+
+===============================================================================
+SON
+===============================================================================
