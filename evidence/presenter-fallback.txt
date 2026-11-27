@@ -1,0 +1,30 @@
+ILLUSTRATIVE OFFLINE EVIDENCE | CLM-218
+Examples below are not Copilot output, screenshots, or GitHub run records.
+
+PLAN | Illustrative Project output
+- Accept a complete synthetic claim: return 202, status accepted.
+- Reject missing, blank and non-string required fields: return 400,
+  error missing_required_fields. Preserve the existing non-object error.
+- Add regression cases, then make the smallest intake change. Do not
+  change date parsing or touch the separate audit-marker finding.
+
+AUTOMATE | Illustrative run-summary format
+PR: CLM-218 | Validate required claims fields
+Observation: unit-tests is failing in the prepared review-failing state.
+Reason: a missing required field was accepted (202); expected 400.
+Evidence: compare 03-review-failing-tests.txt with
+04-review-fixed-tests.txt. These are LOCAL outputs, not GitHub CI.
+Suggested next action: change the intake logic while retaining the tests.
+Unknown on offline path: PR check link, actual hosted run and approval state.
+Writes: none in this illustration.
+
+REVIEW | Illustrative review and handoff
+Inspect only the intended validation diff; no review-mode comparison was
+run offline. A green local test run does not approve or merge the PR.
+See the review-fix overlay and the before/after local test outputs.
+
+SECURE | Local policy output, not a live GitHub alert
+Compare 05-security-open-scan.txt with 06-security-fixed-scan.txt.
+The scanner reports DEMO001 when the payload-free marker is disabled.
+The reference fix enables only the fixed synthetic marker. It does not add a
+claim payload. A clean local scan does not close a hosted alert.

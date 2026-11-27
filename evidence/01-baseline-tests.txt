@@ -1,0 +1,11 @@
+LOCAL PYTHON TEST OUTPUT - NOT GITHUB CI
+python -m unittest discover -s tests -v
+
+test_accepts_a_complete_synthetic_submission (test_baseline.IntakeBaselineTests.test_accepts_a_complete_synthetic_submission) ... ok
+test_enabled_marker_contains_no_claim_data (test_baseline.IntakeBaselineTests.test_enabled_marker_contains_no_claim_data) ... ok
+test_rejects_a_non_object (test_baseline.IntakeBaselineTests.test_rejects_a_non_object) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.001s
+
+OK

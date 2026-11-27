@@ -1,0 +1,19 @@
+--- a/claims_intake.py
++++ b/claims_intake.py
+@@ -1,10 +1,16 @@
+ import json
+ import sys
++
++REQUIRED_FIELDS = ("claim_ref", "loss_date")
+ 
+ 
+ def submit_claim(summary: object) -> tuple[int, dict[str, str]]:
+     if not isinstance(summary, dict):
+         return 400, {"error": "invalid_submission"}
++    for field in REQUIRED_FIELDS:
++        value = summary.get(field)
++        if not isinstance(value, str) or not value.strip():
++            return 400, {"error": "missing_required_fields"}
+     return 202, {"status": "accepted"}
+ 
+ 

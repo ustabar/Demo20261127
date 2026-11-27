@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "Claims Demo Policy",
+          "rules": [
+            {
+              "id": "DEMO001",
+              "name": "SyntheticAuditMarker",
+              "shortDescription": {
+                "text": "The synthetic, payload-free audit marker is disabled."
+              },
+              "fullDescription": {
+                "text": "Training-only policy for a dummy event with no payload."
+              }
+            }
+          ]
+        }
+      },
+      "results": []
+    }
+  ]
+}

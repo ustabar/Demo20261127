@@ -1,0 +1,10 @@
+CLM-218 | Reject incomplete synthetic claims submissions
+
+Current behavior: a dictionary is accepted even when a required field is missing.
+Required fields: claim_ref and loss_date. Both must be non-blank strings.
+Complete submissions still return 202 and {"status": "accepted"}.
+Missing, blank or non-string required fields must return 400 and
+{"error": "missing_required_fields"}. Non-object input keeps its existing error.
+
+Out of scope: date parsing, field normalization, real claims data, external services
+and the separate audit-marker finding. Keep the regression tests unchanged.
