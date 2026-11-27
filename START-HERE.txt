@@ -13,6 +13,10 @@ From each prepared directory:
   python -m unittest discover -s tests -v
   python .\scan_demo.py --sarif demo-results.sarif
 
+To reset local rehearsal outputs and start again:
+  powershell -ExecutionPolicy Bypass -File .\scripts\Reset-DemoWorkspace.ps1
+  powershell -ExecutionPolicy Bypass -File .\scripts\Reset-DemoWorkspace.ps1 -Hard
+
 Expected: baseline 3 tests pass, review-failing 5 tests collected with
 intentional failures, review-fixed 5 pass. DEMO001 is present in
 security-open and absent in security-fixed. The other states retain the
