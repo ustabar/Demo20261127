@@ -1,4 +1,0 @@
-LOCAL TRAINING SCAN - NOT A HOSTED GITHUB ALERT
-python scan_demo.py --sarif demo-results.sarif
-
-0 findings (DEMO001)

@@ -1,4 +1,0 @@
-LOCAL TRAINING SCAN - NOT A HOSTED GITHUB ALERT
-python scan_demo.py --sarif demo-results.sarif
-
-audit_marker.py:3: DEMO001: The synthetic, payload-free audit marker is disabled.
