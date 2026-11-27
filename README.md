@@ -101,3 +101,22 @@ backdoor parola, düz metin loglama, SSRF, path traversal, kapalı TLS doğrulam
 ---
 
 Prompt şablonları için bkz: `PROMPTS-CheatSheet.md`.
+
+## Demo reset / cleanup (baştan başlatma)
+
+Canlı demoyu yeniden temiz durumdan başlatmak için:
+
+```powershell
+.\scripts\Reset-DemoWorkspace.ps1 -Preview
+.\scripts\Reset-DemoWorkspace.ps1 -Force
+```
+
+Alternatif kısa yol:
+
+```bat
+.\scripts\Reset-DemoWorkspace.bat -Force
+```
+
+Bu script `Demo-Repo` altındaki:
+- tracked dosyalardaki değişiklikleri `HEAD`'e döndürür
+- untracked/ignored artifact dosyalarını temizler (`git clean -fdx`)
